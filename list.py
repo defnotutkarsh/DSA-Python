@@ -117,23 +117,98 @@
 # print(rotate_list([1, 2, 3], 3))           # [1, 2, 3]
 # print(rotate_list([], 5))                  # []
 
-def second_largest(lst):
-    if(len(lst)<2):
-        return None
-    first = lst[0]
-    second = None
-    for i in range(len(lst)):
-        if(lst[i]>first):
-            second = first
-            first = lst[i]
-        elif (lst[i] != first) and (second is None or lst[i] > second): 
-            second = lst[i]
-    return second
+# def second_largest(lst):
+    # if(len(lst)<2):
+        # return None
+    # first = lst[0]
+    # second = None
+    # for i in range(len(lst)):
+        # if(lst[i]>first):
+            # second = first
+            # first = lst[i]
+        # elif (lst[i] != first) and (second is None or lst[i] > second): 
+            # second = lst[i]
+    # return second
+# 
+# 
+# 
+# print(second_largest([3, 7, 2, 9, 1]))        # 7
+# print(second_largest([10, 20, 30]))            # 20
+# print(second_largest([5, 5, 5]))               # None
+# print(second_largest([1]))                     # None
+# print(second_largest([4, 1, 8, 8, 3]))         # 4
+
+# def two_sum(lst, target):
+    # seen = {}
+    # for i in range (len(lst)):
+        # need = target - lst[i]
+        # if(need in seen):
+            # return [seen[need],i]
+        # else:
+            # seen[lst[i]] = i
+        # 
+# print(two_sum([2, 7, 11, 15], 9))       # [0, 1]
+# print(two_sum([3, 2, 4], 6))            # [1, 2]
+# print(two_sum([1, 5, 3, 7], 8))         # [1, 2]
+# print(two_sum([10, 20, 30, 40], 50))    # [1, 2]
+
+# def rotate_list(lst, k):
+    # return lst[-k:]+lst[:-k]
+            # 
+# print(rotate_list([1, 2, 3, 4, 5], 2))    # [4, 5, 1, 2, 3]
+# print(rotate_list([10, 20, 30], 1))        # [30, 10, 20]
+# print(rotate_list([1, 2, 3], 3))           # [1, 2, 3]
+# print(rotate_list([], 5))                  # []
+
+# def second_largest(lst):
+    # first = lst[0]
+    # second = None
+    # if(len(lst)<2):
+        # return None
+    # for i in range (len(lst)):
+        # if (lst[i]>first):
+            # second = first
+            # first = lst[i]
+        # elif((lst[i]!=first)and(second is None or lst[i]> second)):
+            # second = lst[i]
+    # return second
+# 
+# print(second_largest([3, 7, 2, 9, 1]))        # 7
+# print(second_largest([10, 20, 30]))            # 20
+# print(second_largest([5, 5, 5]))               # None
+# print(second_largest([1]))                     # None
+# print(second_largest([4, 1, 8, 8, 3]))         # 4
+
+# def  move_zeroes(lst):
+#     zer = []
+#     nonzer = []
+#     for i in range(len(lst)):
+#         if (lst[i]==0):
+#             zer.append(lst[i])
+#         else:
+#             nonzer.append(lst[i])
+#     return nonzer + zer
 
 
 
-print(second_largest([3, 7, 2, 9, 1]))        # 7
-print(second_largest([10, 20, 30]))            # 20
-print(second_largest([5, 5, 5]))               # None
-print(second_largest([1]))                     # None
-print(second_largest([4, 1, 8, 8, 3]))         # 4
+
+# print(move_zeroes([0, 1, 0, 3, 12]))      # [1, 3, 12, 0, 0]
+# print(move_zeroes([1, 2, 3]))              # [1, 2, 3]
+# print(move_zeroes([0, 0, 0]))              # [0, 0, 0]
+# print(move_zeroes([4, 0, 5, 0, 6]))       # [4, 5, 6, 0, 0]
+# print(move_zeroes([]))                     # []
+
+# def count_freq(lst):
+    # freq = {}
+    # for num in lst :
+        # if num in freq :
+            # freq[num] += 1
+        # else:
+            # freq[num] = 1
+    # return freq
+# 
+# 
+# print(count_freq([1, 2, 2, 3, 3, 3]))           # {1: 1, 2: 2, 3: 3}
+# print(count_freq(["a", "b", "a", "c", "b"]))     # {"a": 2, "b": 2, "c": 1}
+# print(count_freq([7]))                            # {7: 1}
+# print(count_freq([]))                             # {}
