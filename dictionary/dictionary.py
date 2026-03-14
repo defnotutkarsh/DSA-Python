@@ -36,10 +36,32 @@
 #     return nonzer + zer
 # print(shif([0, 1, 0, 3, 12]))
 
-def longest(lst):
-    larg = ""
-    for word in lst:
-        if(len(word)>len(larg)):
-            larg =word
-    return larg
-print(longest(["hi", "hello", "hey"] ))
+# def longest(lst):
+    # larg = ""
+    # for word in lst:
+        # if(len(word)>len(larg)):
+            # larg =word
+    # return larg
+# print(longest(["hi", "hello", "hey"] ))
+
+# def freq(s):
+#     count = {}
+#     for word in s.split():
+#         count[word] = count.get(word,0)+1
+#     return count
+# print(freq("the cat and the dog"))
+# print(freq("a a a b b"))
+# print(freq("hello"))
+
+
+# def freq(s):
+#     count = {}
+#     for word in s.split():
+#         count[word] = count.get(word,0) + 1
+#     return count
+
+# print(freq("the cat and the dog"))
+# print(freq("a a a b b"))
+# print(freq("hello"))
+
+
