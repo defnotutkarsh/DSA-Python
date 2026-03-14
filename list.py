@@ -212,3 +212,76 @@
 # print(count_freq(["a", "b", "a", "c", "b"]))     # {"a": 2, "b": 2, "c": 1}
 # print(count_freq([7]))                            # {7: 1}
 # print(count_freq([]))                             # {}
+
+
+# def merge_sorted(lst1,lst2):
+#     mylst = []
+#     i = 0
+#     j = 0
+#     while(i < len(lst1) and j < len(lst2)):
+#         if lst1[i]>lst2[j]:
+#             mylst.append(lst2[j])
+#             j= j+1
+#         else:
+#             mylst.append(lst1[i])
+#             i += 1
+#     mylst = mylst + lst1[i:]
+#     mylst = mylst + lst2[j:]
+#     return mylst
+# print(merge_sorted([1, 3, 5], [2, 4, 6]))        # [1, 2, 3, 4, 5, 6]
+# print(merge_sorted([1, 2, 3], [4, 5, 6]))        # [1, 2, 3, 4, 5, 6]
+# print(merge_sorted([1, 5, 9], [2, 3]))            # [1, 2, 3, 5, 9]
+# print(merge_sorted([], [1, 2, 3]))                # [1, 2, 3]
+# print(merge_sorted([7], [3, 8]))                  # [3, 7, 8]
+
+
+# def intersection(lst1, lst2):
+#     seen = {}
+#     res = []
+#     for num in lst1 :
+#         if(num in lst1):
+#             seen[num] = True
+#     for num in lst2:
+#         if(num in seen):
+#             res.append(num)
+#             del seen[num]
+#     return res
+
+
+
+# print(intersection([1, 2, 3, 4], [3, 4, 5, 6]))          # [3, 4]
+# print(intersection([1, 1, 2, 2], [2, 2, 3, 3]))          # [2]
+# print(intersection([1, 2, 3], [4, 5, 6]))                # []
+# print(intersection([], [1, 2]))                           # []
+# print(intersection([5, 5, 5], [5, 5, 5]))                # [5]
+
+# def has_pair(lst, target):
+    # seen = {}
+    # for i in range (len(lst)):
+        # need = target - lst[i]
+        # if(need in seen):
+            # return True
+        # else: seen[lst[i]] = i
+    # return False
+# print(has_pair([1, 4, 7, 2], 9))         # True (7+2)
+# print(has_pair([1, 2, 3, 4], 10))        # False
+# print(has_pair([5, 5], 10))              # True
+# print(has_pair([3], 6))                  # False
+# print(has_pair([], 5))                   # False
+
+
+def find_missing(lst):
+    n = len(lst)
+    org = 0
+    sum = (n*(n+1))//2
+    for i  in range (len(lst)):
+        org = org + lst[i]
+    if(sum == org):
+        return []
+    else:
+        return sum - org
+
+print(find_missing([3, 0, 1]))            # 2
+print(find_missing([0, 1]))               # 2
+print(find_missing([9,6,4,2,3,5,7,0,1]))  # 8
+print(find_missing([0]))                  # 1
