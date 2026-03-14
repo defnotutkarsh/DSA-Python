@@ -1,0 +1,99 @@
+{
+
+    "version": "2.0.0",
+
+    "tasks": [
+
+        {
+
+            "label": "Build Program",
+
+            "type": "shell",
+
+            "command": "g++",
+
+            "args": [
+
+                "-g",
+
+                "${file}",
+
+                "-o",
+
+                "${fileDirname}/${fileBasenameNoExtension}.exe"
+
+            ],
+
+            "group": {
+
+                "kind": "build",
+
+                "isDefault": true
+
+            },
+
+            "problemMatcher": [],
+
+            "detail": "Compile the program"
+
+        },
+
+       
+
+      {
+
+        "label": "Run and Redirect Output",
+
+        "type": "shell",
+
+        "command": "cmd.exe",
+
+        "args": [
+
+            "/c",
+
+           "${fileDirname}\\${fileBasenameNoExtension}.exe < input.txt > output.txt"
+
+        ],
+
+        "group": {
+
+          "kind": "build",
+
+          "isDefault": true
+
+        },
+
+        "presentation": {
+
+            "reveal": "always",
+
+            "panel": "shared"
+
+        },
+
+        "options": {
+
+            "cwd": "${fileDirname}"
+
+        },
+
+        "problemMatcher": [],
+
+        "dependsOn": ["Build Program"],
+
+        "detail": "Run the program and save output to output.txt"
+
+    }
+
+     
+
+    ]
+
+}
+
+
+
+
+2
+
