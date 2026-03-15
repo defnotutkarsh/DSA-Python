@@ -267,31 +267,46 @@ def substrings(s):
 
 ---
 
-## PROBLEM 9: STRING COMPRESSION
+## PROBLEM 9: STRING COMPRESSION (CONSECUTIVE)
 
-**Task:** `compress("aaabbc")` → `"a3b2c1"`
+**Task:** `compress("aaabbc")` → `"a3b2c1"` (counts consecutive characters)
 
 **Logic:**
-- Count characters
-- Build result: char + str(count)
+- Track current character and its count
+- When character changes, add to result, reset count
+- Don't forget the last group at the end
 
 ```python
 def compress(s):
-    count = {}
-    for char in s:
-        if char in count:
-            count[char] = count[char] + 1
-        else:
-            count[char] = 1
-    result = ""
-    for key in count:
-        result = result + key + str(count[key])
-    return result
+    current = s[0]
+    count = 1
+    res = ""
+    for i in range(1, len(s)):
+        if s[i] == current:
+            count = count + 1
+        elif s[i] != current:
+            res = res + current + str(count)
+            count = 1
+            current = s[i]
+    return res + current + str(count)
 ```
 
-**Key concept:** `str(3)` converts integer to string — can't do `"a" + 3`
+**Key concepts:**
+- `str(3)` converts integer to string — can't do `"a" + 3`
+- Final `return res + current + str(count)` adds the last group (loop doesn't catch it)
 
-**Your mistake:** Used `return` inside loop — returned after first key only
+**Walk through "aaabbc":**
+| i | s[i] | current | count | res |
+|---|------|---------|-------|-----|
+| start | - | "a" | 1 | "" |
+| 1 | "a" | "a" | 2 | "" |
+| 2 | "a" | "a" | 3 | "" |
+| 3 | "b" | "b" | 1 | "a3" |
+| 4 | "b" | "b" | 2 | "a3" |
+| 5 | "c" | "c" | 1 | "a3b2" |
+| end | - | - | - | "a3b2c1" |
+
+**Edge case:** Empty string will crash (s[0] fails). Add check if needed.
 
 ---
 

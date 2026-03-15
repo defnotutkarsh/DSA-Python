@@ -347,7 +347,7 @@
 #             count[char] = 1
 #     result = ""
 #     for key in count:
-#         result = result + key +str(count[key])
+        # result = result + key +str(count[key])
 #     return result
 # print(compress("aaabbc")) 
 # print(compress("aaa")) 
