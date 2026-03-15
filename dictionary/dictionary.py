@@ -95,16 +95,49 @@
 # print(ana(["eat", "tea", "tan", "ate", "nat", "bat"]))
 # print(ana(["hello", "world"]))
 
-def ana(lst):
-    res = {}
-    for word in lst :
-        key = "".join(sorted(word))
-        if key in res :
-            res[key].append(word)
+# def ana(lst):
+#     res = {}
+#     for word in lst :
+#         key = "".join(sorted(word))
+#         if key in res :
+#             res[key].append(word)
+#         else:
+#             res[key] = [word]
+#     return list(res.values())
+
+
+# print(ana(["eat", "tea", "tan", "ate", "nat", "bat"]))
+# print(ana(["hello", "world"]))
+
+
+# def charmap(s1,s2):
+#     dic = {}
+#     for i in range (len(s1)):
+#         dic[s1[i]] = s2[i]
+#     return dic
+# print(charmap("hello", "world"))
+# print(charmap("abc", "xyz"))
+
+# def twosum(lst,target):
+#     seen = {}
+#     for i in range (len(lst)):
+#         need = target - lst[i]
+#         if (need in seen):
+#             return [seen[need],i]
+#         else:
+#             seen[lst[i]] = i
+# print(twosum([3, 2, 4], target=6))
+# print(twosum([2, 7, 11, 15],target=9))
+
+
+def invertfinalboss(d):
+    res  = {}
+    for key,value in d.items():
+        
+        if value in res :
+            res[value].append(key)
         else:
-            res[key] = [word]
-    return list(res.values())
-
-
-print(ana(["eat", "tea", "tan", "ate", "nat", "bat"]))
-print(ana(["hello", "world"]))
+            res[value] = [key]
+    return res
+print(invertfinalboss({"a": 1, "b": 2, "c": 1}))
+print(invertfinalboss({"x": 5, "y": 5, "z": 5}))
