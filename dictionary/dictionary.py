@@ -64,4 +64,47 @@
 # print(freq("a a a b b"))
 # print(freq("hello"))
 
+# def freq(s):
+#     count = {}
+#     s = s.split()
 
+#     for word in s :
+#         count[word] = count.get(word,0) + 1
+#     return count
+# print(freq("the cat and the dog"))
+# print(freq("a a a b b"))
+# print(freq("hello"))
+
+
+# def invert(d):
+#     res = {}
+#     for key,value in d.items():
+#         res[value] = key
+#     return res
+# print(invert({"a": 1, "b": 2, "c": 3}))
+
+# def ana(lst):
+#     res = {}
+#     for word in lst:
+#         key = "".join(sorted(word))
+#         if key in res :
+#             res[key].append(word)
+#         else:
+#             res[key] = [word]
+#     return list(res.values())
+# print(ana(["eat", "tea", "tan", "ate", "nat", "bat"]))
+# print(ana(["hello", "world"]))
+
+def ana(lst):
+    res = {}
+    for word in lst :
+        key = "".join(sorted(word))
+        if key in res :
+            res[key].append(word)
+        else:
+            res[key] = [word]
+    return list(res.values())
+
+
+print(ana(["eat", "tea", "tan", "ate", "nat", "bat"]))
+print(ana(["hello", "world"]))
