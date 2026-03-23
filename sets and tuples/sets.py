@@ -191,3 +191,19 @@
 #     for value,key in d.items():
 #         if value in res:
 #             res[value].append(key)
+
+# def idk(s):
+#     seen = {}
+#     for char in s:
+#         seen[char] = seen.get(char,0)+1
+#     return seen
+
+def common_elements(lst1, lst2):
+    return list(set(lst1) & set(lst2))
+
+# Test
+lst1 = [1, 2, 2, 3]
+lst2 = [2, 3, 3, 4]
+
+result = common_elements(lst1, lst2)
+print(result)
