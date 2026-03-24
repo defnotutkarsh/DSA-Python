@@ -197,13 +197,21 @@
 #     for char in s:
 #         seen[char] = seen.get(char,0)+1
 #     return seen
+# SET
+# def intersec(lst1,lst2):
+#     return list(set(lst1)&set(lst2))
+# print(intersec([1, 2, 2, 3], [2, 3, 3, 4]))
+# print(intersec([1, 5, 7], [2, 3, 4]))
+# print(intersec([1, 1, 1], [1, 1, 1]))
 
-def common_elements(lst1, lst2):
-    return list(set(lst1) & set(lst2))
-
-# Test
-lst1 = [1, 2, 2, 3]
-lst2 = [2, 3, 3, 4]
-
-result = common_elements(lst1, lst2)
-print(result)
+def rem(lst):
+    res = []
+    seen = {}
+    for num in lst:
+        if num not in seen :
+            res.append(num)
+            seen[num] = True
+    return res
+print(rem([3, 1, 2, 1, 3, 4, 2]))
+print(rem([1, 1, 1]))
+print(rem([5, 4, 3, 2, 1]))
