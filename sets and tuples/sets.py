@@ -204,14 +204,49 @@
 # print(intersec([1, 5, 7], [2, 3, 4]))
 # print(intersec([1, 1, 1], [1, 1, 1]))
 
-def rem(lst):
-    res = []
-    seen = {}
+# def rem(lst):
+#     res = []
+#     seen = {}
+#     for num in lst:
+#         if num not in seen :
+#             res.append(num)
+#             seen[num] = True
+#     return res
+# print(rem([3, 1, 2, 1, 3, 4, 2]))
+# print(rem([1, 1, 1]))
+# print(rem([5, 4, 3, 2, 1]))
+
+# def cor(lst):
+#     d={}
+#     for cord,label in lst:
+#         d[cord] = label
+#     return d
+# print(cor([((1, 2), "A"), ((3, 4), "B"), ((1, 2), "C")]))
+# print(cor([((0, 0), "origin"), ((5, 5), "corner")]))
+# print(cor([((1, 1), "X"), ((1, 1), "Y"), ((1, 1), "Z")]))
+
+# def coun(lst):
+#     com = set(lst[0])
+#     for s in lst[1:]:
+#         com = com&set(s)
+#     return len(com)
+# print(coun(["hello", "world", "hold"]))
+# print(coun(["abc", "bcd", "cde"]))
+# print(coun(["aaa", "bbb", "ccc"]))
+
+
+def dupl(lst):
+    seen =set()
+    dup = set()
+    
     for num in lst:
-        if num not in seen :
-            res.append(num)
-            seen[num] = True
-    return res
-print(rem([3, 1, 2, 1, 3, 4, 2]))
-print(rem([1, 1, 1]))
-print(rem([5, 4, 3, 2, 1]))
+        if num not in seen:
+            seen.add(num)
+        else:
+            dup.add(num)
+    return dup
+            
+    
+print(dupl([1, 3, 4, 2, 1, 2, 4]))
+print(dupl([1, 2, 3]))
+print(dupl([5, 5, 5, 5]))
