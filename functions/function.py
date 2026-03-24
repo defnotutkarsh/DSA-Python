@@ -30,3 +30,44 @@
 # print(two_sum( [2, 7, 11, 15], target = 9)) 
 # print(two_sum( [3, 2, 4], target = 6))
 # print(two_sum([1, 5, 3, 7], target = 8))
+
+# def sor(lst):
+#     return sorted(lst,key =lambda x:x[-1])
+# print(sor(["hello", "boa", "zip", "ant"]))
+# print(sor(["dog", "cat", "bat"]))
+# print(sor( ["z"]))
+
+# def dub(lst):
+#     return list(map(lambda x: x*2, lst))
+# print(dub([1, 2, 3]))
+# print(dub([-1, 0, 5]))
+# print(dub([]))
+
+# def keep_positive(lst):
+#     return list(filter(lambda x: x>0 ,lst))
+# print(keep_positive([1, -2, 3, -4, 5]))
+# print(keep_positive([-1, -2, -3]))
+# print(keep_positive([0, 5, -3, 10]))
+    
+
+# Input: [1, -2, 3, -4, 5]
+# Output: [1, 3, 5]
+
+# Input: [-1, -2, -3]
+# Output: []
+
+# Input: [0, 5, -3, 10]
+# Output: [5, 10]
+
+# def factorial(n):
+#     if (n==0):
+#         return 1
+#     return n*factorial(n-1)
+# print(factorial(5))
+# print(factorial(0))
+# print(factorial(3))
+
+def rec_sum(lst):
+    if (len(lst)==0):
+        return 0
+    return lst[0] + rec_sum(lst[1:])
