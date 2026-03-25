@@ -67,10 +67,20 @@
 # print(factorial(0))
 # print(factorial(3))
 
-def rec_sum(lst):
-    if (len(lst)==0):
-        return 0
-    return lst[0] + rec_sum(lst[1:])
-print(rec_sum([1, 2, 3, 4]))
-print(rec_sum( [5]))
-print(rec_sum([]))
+# def rec_sum(lst):
+#     if (len(lst)==0):
+#         return 0
+#     return lst[0] + rec_sum(lst[1:])
+# print(rec_sum([1, 2, 3, 4]))
+# print(rec_sum( [5]))
+# print(rec_sum([]))
+
+def sort_by_frequency(lst):
+    d ={}
+    for num in lst:
+        d[num] = d.get(num,0)+1
+    return sorted(lst , key =lambda x:d[x])
+print(sort_by_frequency([4, 4, 1, 2, 2, 2]))
+print(sort_by_frequency([5, 5, 5]))
+print(sort_by_frequency([3, 1, 3, 1, 2]))
+
