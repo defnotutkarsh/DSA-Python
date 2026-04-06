@@ -30,16 +30,111 @@
 # print(count_words("word")) 
 # print(count_words(""))
 
-def first_unique(s):
-    count = {}
-    for char in s:
-        count[char] =count.get(char,0)+1
-    for char in s:
-        if count[char] ==1
-        return char
-    return None
+# def first_unique(s):
+#     count = {}
+#     for char in s:
+#         count[char] = count.get(char,0)+1
+#     for char in s :
+#         if (count[char] == 1) :
+#             return char
+  
 
-print(first_unique("aabbcdd")) 
-print(first_unique("hello")) 
-print(first_unique("aabbcc"))  
-print(first_unique("abcd")) 
+# print(first_unique("aabbcdd")) 
+# print(first_unique("hello")) 
+# print(first_unique("aabbcc"))  
+# print(first_unique("abcd")) 
+
+# def remove_duplicates(s):
+#     res = ""
+#     seen = {}
+#     for char in s:
+#         if(char not in seen):
+#             res += char
+#             seen[char] = True
+#     return res
+        
+        
+
+
+# print(remove_duplicates("hello")) 
+# print(remove_duplicates("aabbcc")) 
+# print(remove_duplicates("abcd"))  
+# print(remove_duplicates("mississippi")) 
+
+# def is_anagram(s1, s2):
+#     d1 = {}
+#     d2 = {}
+#     for char in s1:
+#         d1[char] = d1.get(char,0)+1
+#     for char in s2:
+#         d2[char] = d2.get(char,0)+1
+#     return (d1==d2)
+
+
+# print(is_anagram("listen", "silent"))
+# print(is_anagram("hello", "world"))
+# print(is_anagram("aab", "aba"))
+# print(is_anagram("aab", "aaa"))
+
+
+# def substrings(s):
+#     res = []
+#     for i in range(len((s))):
+#         for j in range ((i+1),len(s)+1)
+#     res.append(s[i:j])
+#     return res
+
+# print(substrings("abc"))
+# print(substrings("ab"))
+# print(substrings("a"))
+
+
+# def compress(s):
+#     if not s:
+#         return ""
+#     count = 1
+#     current = s[0]
+#     res = ""
+#     for i in range(1,len(s)):
+#         if(s[i]==current):
+#             count+=1
+#         elif(s[i] != current):
+#             res = res + current + str(count)
+#             current =s[i]
+#             count = 1
+#     return res + current + str(count)
+# print(compress("aaabbc"))
+# print(compress("aaa"))
+# print(compress("abc"))
+# print(compress(""))
+
+# def reverse_list(lst):
+#     lst1 = []
+#     for i in range(len(lst)-1,-1,-1):
+#         lst1.append(lst[i])
+#     return lst1
+# print(reverse_list([1, 2, 3, 4, 5]))       # [5, 4, 3, 2, 1]
+# print(reverse_list([10, 20, 30]))           # [30, 20, 10]
+# print(reverse_list([7]))                    # [7]
+# print(reverse_list([]))                     # []
+# print(reverse_list(["a", "b", "c"]))        # ["c", "b", "a"]
+
+
+
+# def find_max(lst):
+#     if (len(lst) == 0):
+#         return None
+#     no = lst[0]
+#     for i in range(1,len(lst)):
+#         if(lst[i]> no):
+#             no = lst[i]
+#     return no
+
+# print(find_max([3, 7, 2, 9, 1]))        # 9
+# print(find_max([10, 20, 30]))            # 30
+# print(find_max([-5, -2, -8]))            # -2
+# print(find_max([42]))                    # 42
+# print(find_max([]))                      # None
+
+
+def two_sum
