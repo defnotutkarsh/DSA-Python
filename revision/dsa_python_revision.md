@@ -431,16 +431,16 @@ Write each from scratch (no looking). Time yourself.
 
 | # | Problem | Target Time |
 |---|---------|-------------|
-| 1 | Reverse a string (no [::-1]) | 1 min |
-| 2 | Palindrome check | 1 min |
-| 3 | Count vowels | 1 min |
-| 4 | First non-repeating character | 2 min |
-| 5 | Anagram check | 2 min |
-| 6 | String compression | 3 min |
-| 7 | Reverse a list (no built-ins) | 1 min |
-| 8 | Find max without max() | 1 min |
-| 9 | Two sum with dict | 3 min |
-| 10 | Remove duplicates (preserve order) | 2 min |
+| 1 | Reverse a string (no [::-1]) | 1 min |done
+| 2 | Palindrome check | 1 min |done
+| 3 | Count vowels | 1 min |done
+| 4 | First non-repeating character | 2 min |done
+| 5 | Anagram check | 2 min |done
+| 6 | String compression | 3 min |done
+| 7 | Reverse a list (no built-ins) | 1 min |done
+| 8 | Find max without max() | 1 min |done
+| 9 | Two sum with dict | 3 min |                  done
+| 10 | Remove duplicates (preserve order) | 2 min |          
 | 11 | Group anagrams | 3 min |
 | 12 | Find duplicates (two-set) | 2 min |
 | 13 | Sort by length (lambda) | 1 min |
@@ -461,3 +461,4 @@ Write each from scratch (no looking). Time yourself.
 4. **`lst = lst.append(x)`** — append modifies in place, returns None
 5. **Forgetting return at end** — function returns None by default
 6. **Opening GPT when stuck** — think for 60 seconds first. You solved recursive_max after saying "idk" by just thinking.
+dictionary last question

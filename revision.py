@@ -197,3 +197,154 @@
 #         d[s1[i]] = s2[i]
 #         return 
 
+
+
+
+
+# def rev(s):
+#     res = ""
+#     for i in range(len(s)-1,-1,-1):
+#         res = res + s[i]
+#     return res
+# print(rev("utk"))
+
+# def vow(s):
+#     count = 0
+#     vowel = "aeiou"
+#     for char in s:
+#         if char in vowel:
+#             count+=1
+#     return count
+# print(vow("utkarsh"))
+
+
+# def first_unique(s):
+#     count = {}
+#     for char in s:
+#         count[char] = count.get(char,0)+1
+#     for char in s:
+#         if (count[char]==1):
+#             return char
+#     return None
+# first_unique("aabbcdd") 
+# first_unique("hello")  
+# first_unique("aabbcc")  
+# first_unique("abcd") 
+
+
+# def is_anagram(s1,s2):
+#     d1 = {}
+#     d2 = {}
+#     for char in s1:
+#         d1[char] = d1.get(char,0)+1
+#     for char in s2:
+#         d2[char] = d2.get(char,0)+1
+#     return (d1==d2)
+
+# print(is_anagram("listen", "silent") )
+# print(is_anagram("hello", "world") )
+# print(is_anagram("aab", "aba") )
+# print(is_anagram("aab", "aaa") )
+
+
+
+# def compress(s):
+#     count = 1
+#     res = ""
+#     current = s[0]
+#     for i in range(1,len(s)):
+#         if(s[i]==current):
+#             count += 1
+#         elif(s[i] != current):
+#             res = res +current+ str(count)
+#             count =1
+#             current = s[i]
+            
+#     return res +current+ str(count)
+# print(compress("aaabbbcc"))
+
+
+# def rev(lst):
+#     res = []
+#     for i in range(len(lst)-1,-1,-1):
+#         res.append(lst[i])
+#     return res
+# print(rev([1, 2, 3, 4, 5]))       # [5, 4, 3, 2, 1]
+# print(rev([10, 20, 30]))           # [30, 20, 10]
+# print(rev([7]))                    # [7]
+# print(rev([]))                     # []
+# print(rev(["a", "b", "c"]))        # ["c", "b", "a"]
+
+# def find_max(lst):
+#     if(len(lst)== 0):
+#         return []
+    
+#     current = lst[0]
+#     for i in range(len(lst)):
+#         if lst[i] > current :
+#             current = lst[i]
+#     return current
+# print(find_max([3, 7, 2, 9, 1]))        # 9
+# print(find_max([10, 20, 30]))            # 30
+# print(find_max([-5, -2, -8]))            # -2
+# print(find_max([42]))                    # 42
+# print(find_max([]))                      # None
+
+
+
+# def two_sum(lst,target):
+    
+#     seen = {}
+#     for i in range(len(lst)):
+#         need = target - lst[i]
+#         if need in seen :
+#             return [seen[need],i]
+#         else:
+#             seen[lst[i]] = i
+# print(two_sum([2, 7, 11, 15], 9))       # [0, 1]
+# print(two_sum([3, 2, 4], 6))            # [1, 2]
+# print(two_sum([1, 5, 3, 7], 8))         # [1, 3]
+# print(two_sum([10, 20, 30, 40], 50))    # [1, 2]
+
+
+
+# def freq(s):
+#     count = {}
+#     s=s.split()
+#     for word in s :
+#         count[word] = count.get(word,0)+1
+#     return count
+# print(freq("the cat and the dog"))
+
+# def invert(d):
+#     res = {}
+#     for key,value in d.items():
+#         res[value]= key
+#     return res
+# print(invert({"a": 1, "b": 2, "c": 3}))
+
+
+# def ana(lst):
+#     res ={}
+#     for word in lst:
+#         key = "".join(sorted(word))
+#         if key in res:
+#             res[key].append(word)
+#         else:
+#             res[key] = [word]
+#     return list(res.values())
+
+
+# def charmap(s1,s2):
+#     d= {}
+#     for i in range(len(s1)):
+#         d[s1[i]] = s2[i]
+#     return d
+# print(charmap("abc", "xyz"))
+
+
+def invert(d):
+    res = {}
+    for key,value in d.items():
+        res[value].append(key)
+    
