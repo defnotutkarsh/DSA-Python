@@ -616,20 +616,139 @@
 # print(coun(["abc", "abc", "abc"]))          # 3
 # print(coun(["a"]))                           # 1
 
-def dupl(lst):
-    duplicate = set()
-    seen = set()
-    for num in lst:
-        if num not in seen:
-            seen.add(num)
-        else:
-            duplicate.add(num)
-    return duplicate
+# def dupl(lst):
+#     duplicate = set()
+#     seen = set()
+#     for num in lst:
+#         if num not in seen:
+#             seen.add(num)
+#         else:
+#             duplicate.add(num)
+#     return duplicate
 
-print(dupl([1, 3, 4, 2, 1, 2, 4]))    # {1, 2, 4}
-print(dupl([1, 2, 3]))                  # set()
-print(dupl([5, 5, 5, 5]))              # {5}
-print(dupl([]))                          # set()
-print(dupl([1, 1, 2, 2, 3, 3]))        # {1, 2, 3}
-print(dupl(["a", "b", "a"]))            # {'a'}
-print(dupl([7]))                         # set()
+# print(dupl([1, 3, 4, 2, 1, 2, 4]))    # {1, 2, 4}
+# print(dupl([1, 2, 3]))                  # set()
+# print(dupl([5, 5, 5, 5]))              # {5}
+# print(dupl([]))                          # set()
+# print(dupl([1, 1, 2, 2, 3, 3]))        # {1, 2, 3}
+# print(dupl(["a", "b", "a"]))            # {'a'}
+# print(dupl([7]))                         # set()
+
+
+# func
+# def find_duplicates(lst):
+#     seen = set()
+#     dup = set()
+#     for num in lst:
+#         if num not in seen:
+#             seen.add(num)
+#         else:
+#             dup.add(num)
+#     return list(dup)
+# print(find_duplicates([1, 3, 2, 3, 5, 1, 6]))
+
+# print(find_duplicates([1, 2, 3]))
+# print(find_duplicates([5, 5, 5]))
+
+
+# def coordinate_labels(pairs):
+#     d = {}
+#     for x,y,label in pairs:
+#         d[x,y] = label
+#     return d
+
+# def two_sum(lst,target):
+#     seen = {}
+#     for i in range(len(lst)):
+#         need = target - lst[i]
+#         if need in seen:
+#             return [seen[need],i]
+#         else:
+#             seen[lst[i]] = i
+# print(two_sum([2, 7, 11, 15], target = 9))
+
+# def sor(lst):
+#     return sorted(lst , key = lambda x:x[-1])
+# print(sor(["hello", "boa", "zip", "ant"]))
+# # ['boa', 'hello', 'zip', 'ant']
+
+# print(sor(["dog", "cat", "bat"]))
+# # ['bat', 'cat', 'dog']
+
+# print(sor(["z"]))
+# # ['z']
+
+# print(sor(["apple", "be", "arc"]))
+# # ['be', 'arc', 'apple']
+
+# def dub(lst):
+#     return list(map(lambda x:x*2 , lst))
+# print(dub([1, 2, 3]))
+# # [2, 4, 6]
+
+# print(dub([-1, 0, 5]))
+# # [-2, 0, 10]
+
+# print(dub([]))
+# # []
+
+# print(dub([100]))
+# # [200]
+
+# def keep_positive(lst):
+#     return list(filter(lambda x: x>0 , lst))
+# print(keep_positive([1, -2, 3, -4, 5]))
+# # [1, 3, 5]
+
+# print(keep_positive([-1, -2, -3]))
+# # []
+
+# print(keep_positive([0, 5, -3, 10]))
+# # [5, 10]
+
+# print(keep_positive([]))
+# # []
+
+# print(keep_positive([7]))
+# # [7]
+
+# def factorial(n):
+#     if(n==0):
+#         return 1
+#     return n*factorial(n-1)
+# print(factorial(5))    # 120
+# print(factorial(0))    # 1
+# print(factorial(3))    # 6
+# print(factorial(1))    # 1
+# print(factorial(10))   # 3628800
+
+# def rec_sum(lst):
+#     if(len(lst)==0):
+#         return 0
+#     return lst[0]+ rec_sum(lst[1:])
+    
+# print(rec_sum([1, 2, 3, 4]))    # 10
+# print(rec_sum([5]))              # 5
+# print(rec_sum([]))               # 0
+# print(rec_sum([-1, -2, -3]))    # -6
+# print(rec_sum([0, 0, 0]))       # 0
+
+def sort_by_frequency(lst):
+    d= {}
+    for num in lst :
+        d[num] = d.get(num,0)+1
+    return sorted(lst , key = lambda x:d[x])
+print(sort_by_frequency([4, 4, 1, 2, 2, 2]))
+# [1, 4, 4, 2, 2, 2]
+
+print(sort_by_frequency([5, 5, 5]))
+# [5, 5, 5]
+
+print(sort_by_frequency([3, 1, 3, 1, 2]))
+# [2, 3, 1, 3, 1]
+
+print(sort_by_frequency([1]))
+# [1]
+
+print(sort_by_frequency([7, 7, 3, 3, 1, 1]))
+# [7, 7, 3, 3, 1, 1]
