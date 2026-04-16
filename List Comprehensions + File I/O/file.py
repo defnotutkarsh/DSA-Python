@@ -69,9 +69,15 @@
 # print(word_lengths("I am here"))
 # print(word_lengths("python"))
 
-def even_squares(lst):
+# def even_squares(lst):
 
-    return [x**2 for x in lst if x%2==0]
-print(even_squares([1, 2, 3, 4, 5, 6]))
-print(even_squares([7, 9, 11]))
-print(even_squares([0, -2, 3]))
+#     return [x**2 for x in lst if x%2==0]
+# print(even_squares([1, 2, 3, 4, 5, 6]))
+# print(even_squares([7, 9, 11]))
+# print(even_squares([0, -2, 3]))
+
+
+with open("data.txt", "r") as f:
+    lines = f.readlines()
+    for line in lines:
+        print(line.strip())
