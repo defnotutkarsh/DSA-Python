@@ -77,7 +77,35 @@
 # print(even_squares([0, -2, 3]))
 
 
-with open("data.txt", "r") as f:
-    lines = f.readlines()
-    for line in lines:
-        print(line.strip())
+# with open("names.txt","w") as f :
+#     f.write("utk\n")
+#     f.write("mmn\n")
+#     f.write("aln\n")
+
+# with open("names.txt","r") as f:
+#     lines = f.readlines()
+#     for line in lines:
+#         print(line.strip())
+
+# with open("scores.txt","w") as f:
+#     f.write("Alice,85\n")
+#     f.write("Bob,92\n")
+#     f.write("Charlie,78\n")
+
+# with open("scores.txt","r") as f:
+#     lines= f.readlines()
+#     for line in lines:
+#         part = line.strip().split(",")
+#         print( f"Name: {part[0]}, Score: {part[1]}")
+
+
+def avg_scores():
+    with open("scores.txt","r") as f:
+        lines = f.readlines()
+        avg = 0
+       
+        for line in lines:
+            part = line.strip().split(",")
+            avg += int(part[1])
+        return avg/len(lines)
+print(avg_scores())
